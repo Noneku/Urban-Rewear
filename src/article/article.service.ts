@@ -1,40 +1,27 @@
 import { Injectable } from '@nestjs/common';
 import { Article } from './article.entity';
+import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class ArticleService {
-  private articles: Article[] = [
-    {
-      id: 1,
-      name: 'Jean vintage Levis',
-      description: 'Jean coupe droite années 90',
-      condition: 'Bon état',
-      size: 'M',
-      price: 25,
-      addedAt: new Date(),
-      vintedLink: 'https://vinted.fr/items/123',
-    },
-  ];
+  constructor(private readonly prisma: PrismaService) {}
 
-  findAll(): Article[] {
-    return this.articles;
+  findAll(): Promise<Article[]> {
+    return this.prisma.article.findMany();
   }
 
-  findOne(id: number): Article | undefined {
-    return this.articles.find(article => article.id === id);
+  findOne(id: number): Promise<Article | null> {
+    return this.prisma.article.findUnique({ where: { id } });
   }
 
-  delete(id: number): void {
-    this.articles = this.articles.filter(article => article.id !== id);
-    }
+  delete(id: number): Promise<Article | null> {
+    return this.prisma.article.delete({ where: { id } });
+  }
 
-    patch(id: number, updatedArticle: Partial<Article>): Article | undefined {
-    const article = this.findOne(id);
-
-    if (article) {
-      Object.assign(article, updatedArticle);
-      return article;
-    }
-    return undefined;
+    patch(id: number, updatedArticle: Partial<Article>): Promise<Article | null> {
+    return this.prisma.article.update({
+      where: { id },
+      data: updatedArticle,
+    });
 }
 }
