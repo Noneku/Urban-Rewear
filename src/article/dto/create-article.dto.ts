@@ -2,21 +2,21 @@ import { IsString, IsNumber, IsUrl, Min } from 'class-validator';
 
 export class CreateArticleDto {
   @IsString()
-  name: string;
+  name!: string;
 
   @IsString()
-  description: string;
+  description!: string;
 
   @IsString()
-  condition: string;
+  condition!: string;
 
   @IsString()
-  size: string;
+  size!: string;
 
   @IsNumber()
   @Min(0)
-  price: number;
+  price!: number;
 
   @IsUrl()
-  vintedLink: string;
+  vintedLink!: string;
 }

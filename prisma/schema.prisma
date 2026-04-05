@@ -22,3 +22,12 @@ model Article {
   addedAt     DateTime @default(now())
   vintedLink  String
 }
+
+model User {
+  id String @id @default(uuid())
+  email String @unique
+  password String
+  role String @default("USER")
+  name String
+  surname String
+}
