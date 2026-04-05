@@ -6,6 +6,10 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class ArticleService {
   constructor(private readonly prisma: PrismaService) {}
 
+  create(article: Article): Promise<Article> {
+    return this.prisma.article.create({ data: article });
+  }
+  
   findAll(): Promise<Article[]> {
     return this.prisma.article.findMany();
   }
