@@ -23,4 +23,18 @@ export class ArticleService {
   findOne(id: number): Article | undefined {
     return this.articles.find(article => article.id === id);
   }
+
+  delete(id: number): void {
+    this.articles = this.articles.filter(article => article.id !== id);
+    }
+
+    patch(id: number, updatedArticle: Partial<Article>): Article | undefined {
+    const article = this.findOne(id);
+
+    if (article) {
+      Object.assign(article, updatedArticle);
+      return article;
+    }
+    return undefined;
+}
 }

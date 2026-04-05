@@ -1,5 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Delete, Get, Param, Patch, Body } from '@nestjs/common';
 import { ArticleService } from './article.service';
+import { Article } from './article.entity';
 
 @Controller('articles')
 export class ArticleController {
@@ -13,5 +14,20 @@ export class ArticleController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.articleService.findOne(Number(id));
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: string) {
+    this.articleService.delete(Number(id));
+    return { message: `Article with id ${id} deleted` };
+  }
+
+  @Patch(':id')
+  patch(@Param('id') id: string, @Body() updatedArticle: Partial<Article>) {
+    const article = this.articleService.patch(Number(id), updatedArticle);
+    if (article) {
+      return article;
+    }
+    return { message: `Article with id ${id} not found` };
   }
 }
