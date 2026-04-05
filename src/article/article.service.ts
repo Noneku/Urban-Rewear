@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Article } from './article.entity';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateArticleDto } from './dto/create-article.dto';
@@ -16,18 +16,36 @@ export class ArticleService {
     return this.prisma.article.findMany();
   }
 
-  findOne(id: number): Promise<Article | null> {
-    return this.prisma.article.findUnique({ where: { id } });
+async findOne(id: number): Promise<Article> {
+  const article = await this.prisma.article.findUnique({ where: { id } });
+  
+  if (!article) {
+    throw new NotFoundException(`Article with id ${id} not found`);
   }
+  
+  return article;
+}
 
-  delete(id: number): Promise<Article | null> {
+  async delete(id: number): Promise<Article> {
+    const article = await this.prisma.article.findUnique({ where: { id } });
+
+    if (!article) {
+      throw new NotFoundException(`Article with id ${id} not found`);
+    }
+
     return this.prisma.article.delete({ where: { id } });
   }
 
-    patch(id: number, updatedArticle: UpdateArticleDto): Promise<Article | null> {
+  async patch(id: number, updatedArticle: UpdateArticleDto): Promise<Article> {
+    const article = await this.prisma.article.findUnique({ where: { id } });
+
+    if (!article) {
+      throw new NotFoundException(`Article with id ${id} not found`);
+    }
+
     return this.prisma.article.update({
       where: { id },
       data: updatedArticle,
     });
-}
+  }
 }
