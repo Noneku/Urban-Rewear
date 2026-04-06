@@ -17,6 +17,9 @@ export class CreateArticleDto {
   @Min(0)
   price!: number;
 
+  @IsString()
+  imageUrl!: string;
+
   @IsUrl()
   vintedLink!: string;
 }

@@ -19,7 +19,8 @@ model Article {
   condition   String
   size        String
   price       Float
-  addedAt     DateTime @default(now())
+  imageUrl    String   @default("")
+  createdAt   DateTime @default(now())
   vintedLink  String
 }
 

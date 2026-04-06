@@ -5,6 +5,7 @@ export interface Article {
   condition: string;
   size: string;
   price: number;
-  addedAt: Date;
+  imageUrl: string;
+  createdAt: Date;
   vintedLink: string;
 }
