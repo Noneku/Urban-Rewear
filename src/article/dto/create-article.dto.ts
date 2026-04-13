@@ -1,4 +1,4 @@
-import { IsString, IsNumber, IsUrl, Min } from 'class-validator';
+import { IsString, IsNumber, Min } from 'class-validator';
 
 export class CreateArticleDto {
   @IsString()
@@ -20,6 +20,6 @@ export class CreateArticleDto {
   @IsString()
   imageUrl!: string;
 
-  @IsUrl()
+  @IsString()
   vintedLink!: string;
 }

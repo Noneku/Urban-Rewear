@@ -46,6 +46,10 @@ lerna-debug.log*
 .temp
 .tmp
 
+# Uploaded images (keep folder, ignore contents)
+/uploads/*
+!/uploads/.gitkeep
+
 # Runtime data
 pids
 *.pid
