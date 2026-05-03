@@ -8,6 +8,7 @@ export interface Article {
   size: string;
   price: number;
   imageUrl: string;
+  images: string[];
   createdAt: Date;
   vintedLink: string;
 }

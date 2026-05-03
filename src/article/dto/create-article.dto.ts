@@ -1,4 +1,4 @@
-import { IsIn, IsNumber, IsString, Min } from 'class-validator';
+import { IsArray, IsIn, IsNumber, IsOptional, IsString, Min } from 'class-validator';
 
 export class CreateArticleDto {
   @IsString()
@@ -25,6 +25,11 @@ export class CreateArticleDto {
 
   @IsString()
   imageUrl!: string;
+
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  images: string[] = [];
 
   @IsString()
   vintedLink!: string;

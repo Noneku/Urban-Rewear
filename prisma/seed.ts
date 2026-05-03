@@ -13,6 +13,11 @@ const articles = [
     size: 'L',
     price: 28,
     imageUrl: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1490481702115-3d1c621e3e2d?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1516257992052-aaed8c56e00c?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   {
@@ -24,6 +29,11 @@ const articles = [
     size: 'S',
     price: 35,
     imageUrl: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   {
@@ -35,6 +45,11 @@ const articles = [
     size: 'M',
     price: 18,
     imageUrl: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1516257992052-aaed8c56e00c?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   // ── Homme · Boutique Marques ───────────────────────────
@@ -47,6 +62,11 @@ const articles = [
     size: 'M',
     price: 45,
     imageUrl: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1490481702115-3d1c621e3e2d?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   {
@@ -58,6 +78,11 @@ const articles = [
     size: 'L',
     price: 40,
     imageUrl: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1516257992052-aaed8c56e00c?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   // ── Femme · Coin Friperie ──────────────────────────────
@@ -70,6 +95,11 @@ const articles = [
     size: 'XL',
     price: 32,
     imageUrl: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1490481702115-3d1c621e3e2d?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   {
@@ -81,6 +111,11 @@ const articles = [
     size: 'M',
     price: 25,
     imageUrl: 'https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
   // ── Femme · Boutique Marques ───────────────────────────
@@ -93,6 +128,11 @@ const articles = [
     size: '38',
     price: 55,
     imageUrl: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=800&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1490481702115-3d1c621e3e2d?w=600&h=800&fit=crop',
+    ],
     vintedLink: 'https://www.vinted.fr',
   },
 ];

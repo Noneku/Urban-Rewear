@@ -22,6 +22,7 @@ model Article {
   size        String
   price       Float
   imageUrl    String   @default("")
+  images      String[] @default([])
   createdAt   DateTime @default(now())
   vintedLink  String
 }
