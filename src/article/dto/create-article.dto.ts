@@ -1,4 +1,4 @@
-import { IsString, IsNumber, Min } from 'class-validator';
+import { IsIn, IsNumber, IsString, Min } from 'class-validator';
 
 export class CreateArticleDto {
   @IsString()
@@ -9,6 +9,12 @@ export class CreateArticleDto {
 
   @IsString()
   condition!: string;
+
+  @IsIn(['Homme', 'Femme'])
+  gender!: string;
+
+  @IsIn(['friperie', 'marque'])
+  section!: string;
 
   @IsString()
   size!: string;

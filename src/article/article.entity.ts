@@ -3,6 +3,8 @@ export interface Article {
   name: string;
   description: string;
   condition: string;
+  gender: string;
+  section: string;
   size: string;
   price: number;
   imageUrl: string;

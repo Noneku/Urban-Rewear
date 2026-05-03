@@ -17,6 +17,8 @@ model Article {
   name        String
   description String
   condition   String
+  gender      String   @default("Homme")
+  section     String   @default("friperie")
   size        String
   price       Float
   imageUrl    String   @default("")
